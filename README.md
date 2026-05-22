@@ -28,69 +28,10 @@ Explain Agent — Explains concepts in beginner-friendly language
 📊 Conversation Summary — Auto-summarizes long conversations to maintain context
 
 🏗️ Project Structure
-enterprise-multi-agent-rag/
-│
-├── backend/
-│   ├── ingest.py               # PDF loader, chunker, embedder, FAISS builder
-│   ├── rag_pipeline.py         # Standalone RAG pipeline (CLI testing)
-│   └── .env                    # Backend API keys (not pushed to GitHub)
-│
-├── frontend/
-│   ├── app.py                  # Main Streamlit app (all-in-one)
-│   ├── auth.py                 # Authentication helpers (SQLite + bcrypt)
-│   ├── conversation_memory.json # Default conversation memory store
-│   ├── memory_swaroop.json     # Per-user memory (auto-created per username)
-│   ├── users.db                # SQLite user database
-│   └── .env                    # Frontend API keys (not pushed to GitHub)
-│
-├── documents/
-│   ├── Chapter 1 (1.1).pdf     # Big Data and Data Science course materials
-│   ├── Chapter 1 (1.2).pdf
-│   ├── Chapter 5 (5.1).pdf
-│   ├── Chapter 5 (5.2).pdf
-│   ├── Chapter 5 (5.3).pdf
-│   ├── Chapter 6 (6.1).pdf
-│   └── Chapter 6 (6.2).pdf
-│
-├── vectorstore/
-│   ├── index.faiss             # FAISS vector index (pre-built)
-│   └── index.pkl               # FAISS metadata/docstore pickle
-│
-├── venv/                       # Virtual environment (not pushed to GitHub)
-├── .gitignore                  # Excludes venv, .env, __pycache__
-├── requirements.txt            # All Python dependencies
-└── README.md                   # This file
+<img width="667" height="764" alt="image" src="https://github.com/user-attachments/assets/e7451ecf-3b90-41ca-a531-c7a9efff12dd" />
 
 🧠 Architecture
-User Query
-    │
-    ▼
-┌─────────────────────────────────────────────┐
-│              LangGraph Workflow              │
-│                                             │
-│   ┌─────────┐                               │
-│   │ Router  │ ── keyword detection          │
-│   └────┬────┘                               │
-│        │                                    │
-│   ┌────▼──────────────────┐                 │
-│   │  QA / Summary /       │                 │
-│   │  Explain Agent Node   │                 │
-│   └────┬──────────────────┘                 │
-│        │                                    │
-│   ┌────▼────┐                               │
-│   │  Prompt │ ◄── FAISS Retrieved Context   │
-│   │ Builder │ ◄── Conversation Memory       │
-│   └────┬────┘                               │
-└────────┼────────────────────────────────────┘
-         │
-    ┌────▼────────────────┐
-    │   Groq LLM          │
-    │ (LLaMA 3.3 70B)     │
-    └────┬────────────────┘
-         │
-    Streaming Response → Streamlit UI
-         │
-    Source Citations + Memory Save
+<img width="447" height="685" alt="image" src="https://github.com/user-attachments/assets/78de45f3-179b-43cf-b99a-a6dce9929df5" />
 
     🛠️ Tech Stack
     <img width="663" height="460" alt="image" src="https://github.com/user-attachments/assets/f3ce3494-ccb8-4c9d-923a-e09a219007d1" />

@@ -28,13 +28,16 @@ Explain Agent — Explains concepts in beginner-friendly language
 📊 Conversation Summary — Auto-summarizes long conversations to maintain context
 
 🏗️ Project Structure
+
 <img width="667" height="764" alt="image" src="https://github.com/user-attachments/assets/e7451ecf-3b90-41ca-a531-c7a9efff12dd" />
 
 🧠 Architecture
+
 <img width="447" height="685" alt="image" src="https://github.com/user-attachments/assets/78de45f3-179b-43cf-b99a-a6dce9929df5" />
 
-    🛠️ Tech Stack
-    <img width="663" height="460" alt="image" src="https://github.com/user-attachments/assets/f3ce3494-ccb8-4c9d-923a-e09a219007d1" />
+🛠️ Tech Stack
+
+ <img width="663" height="460" alt="image" src="https://github.com/user-attachments/assets/f3ce3494-ccb8-4c9d-923a-e09a219007d1" />
 
     🚀 Getting Started Locally
 1. Clone the repository
